@@ -151,6 +151,7 @@ let sortedAge = familyAge.sort(
 );
 console.log(sortedAge); */
 // Slice
-var words = ["seal", "dog", "scorpion", "orangutan", "salamander"];
+/* var words = ["seal", "dog", "scorpion", "orangutan", "salamander"];
 const sliced = words.slice(3);
-console.log(sliced);
+console.log(sliced); */
+// 12.2.2
