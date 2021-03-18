@@ -69,10 +69,10 @@ function buildCharts(sample) {
       //console.log(dataEachId);
     }
 
-    let firstSample = dataEachId[0];
+    // let firstSample = dataEachId[0];
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    let { otu_ids, otu_labels, sample_values } = firstSample;
+    let { otu_ids, otu_labels, sample_values } = dataEachId[0];
 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order
