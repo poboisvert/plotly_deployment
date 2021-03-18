@@ -89,7 +89,7 @@ var doubled = numbers.map(function (num) {
 console.log(doubled); */
 
 // Map 2
-var cities = [
+/* var cities = [
   {
     Rank: 1,
     City: "San Antonio ",
@@ -116,4 +116,41 @@ var cities = [
 var cityNames = cities.map(function (city) {
   return city.City;
 });
-console.log(cityNames);
+console.log(cityNames); */
+// Filter
+/* var numbers = [1, 2, 3, 4, 5];
+
+var larger = numbers.filter(function (num) {
+  return num > 1;
+});
+
+console.log(larger);
+ */
+
+// Filter 2
+/* var familyAge = [2, 3, 39, 37, 9];
+
+var olderThanFive = familyAge.filter(function (age) {
+  return age > 5;
+});
+console.log(olderThanFive); */
+// 12.2.1
+// Double num with map
+/* const numbers = [1, 2, 3, 4, 5];
+
+let doubled = numbers.map((num) => num * 2);
+console.log(doubled); */
+// Sort
+/* const familyAge = [3, 2, 39, 37, 9];
+let sortedAge = familyAge.sort((a, b) => a - b);
+console.log(sortedAge); */
+// Sort V2
+/* const familyAge = [3, 2, 39, 37, 9];
+let sortedAge = familyAge.sort(
+  (anElement, anotherElement) => anElement - anotherElement
+);
+console.log(sortedAge); */
+// Slice
+var words = ["seal", "dog", "scorpion", "orangutan", "salamander"];
+const sliced = words.slice(3);
+console.log(sliced);
