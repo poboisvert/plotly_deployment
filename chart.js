@@ -131,7 +131,8 @@ function buildCharts(sample) {
           // Bubble settings
           size: sample_values,
           color: otu_ids,
-          colorscale: "Earth",
+          colorscale: "contour",
+          // https://plotly.com/javascript/colorscales/#electric-colorscale
         },
       },
     ];
@@ -147,6 +148,7 @@ function buildCharts(sample) {
     };
 
     // 3. Use Plotly to plot the data with the layout.
+    // Plotly.newPlot('myDiv', data, layout, config );
     Plotly.newPlot("bubble", bubbleData, bubbleLayout, { responsive: true });
   });
 }
