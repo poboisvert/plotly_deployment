@@ -78,6 +78,7 @@ function buildCharts(sample) {
     // Hint: Get the the top 10 otu_ids and map them in descending order
     //  so the otu_ids with the most bacteria are last.
     //
+    //
     // Bar Chart
     //
     //
@@ -117,6 +118,7 @@ function buildCharts(sample) {
 
     // Use Plotly to plot the data with the layout.
     //
+    //
     // Bubble Chart
     //
     //
@@ -151,5 +153,14 @@ function buildCharts(sample) {
     // 3. Use Plotly to plot the data with the layout.
     // Plotly.newPlot('myDiv', data, layout, config );
     Plotly.newPlot("bubble", bubbleData, bubbleLayout, { responsive: true });
+    // D2: 3. Use Plotly to plot the data with the layout.
+
+    // 4. Create the trace for the gauge chart.
+    var gaugeData = [];
+
+    // 5. Create the layout for the gauge chart.
+    var gaugeLayout = {};
+
+    // 6. Use Plotly to plot the gauge data and layout.
   });
 }
