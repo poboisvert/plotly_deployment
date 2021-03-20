@@ -169,13 +169,13 @@ function buildCharts(sample) {
     //console.log(metadataId[0].wfreq);
 
     // 5. The washing frequency.
-    var washFreq = metadataId[0].wfreq;
-
+    var [metaObj] = metadataId;
+    //console.log(metaObj);
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
       {
         domain: { x: [0, 1], y: [0, 1] },
-        value: washFreq,
+        value: metaObj.wfreq,
         title: {
           text: "<b>Belly Button Washing Frequency</b><br>Scrubs per week",
         },
