@@ -103,15 +103,16 @@ function buildCharts(sample) {
     var layoutHTML = {
       title: "Top 10 Bacteria Cultures Found",
       xaxis: { title: "Quantity" },
-      showlegend: false,
       yaxis: {
         tickmode: "array",
         tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         ticktext: yticks,
       },
+      showlegend: false,
     };
     //
     // 10. Use Plotly to plot the data with the layout.
+    // Plotly.newPlot('myDiv', data, layout, config );
     Plotly.newPlot("bar", data, layoutHTML, { responsive: true });
 
     // Use Plotly to plot the data with the layout.
