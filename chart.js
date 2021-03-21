@@ -170,7 +170,7 @@ function buildCharts(sample) {
 
     // 5. The washing frequency.
     var [metaObj] = metadataId;
-    //console.log(metaObj);
+    console.log(metaObj);
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
       {
@@ -184,6 +184,9 @@ function buildCharts(sample) {
         gauge: {
           axis: {
             range: [null, 10],
+            tickvals: [0, 2, 4, 6, 8, 10],
+            ticktext: [0, 2, 4, 6, 8, 10],
+            // https://plotly.com/python-api-reference/generated/plotly.graph_objects.indicator.gauge.html
           },
           bar: { color: "black" },
           steps: [
