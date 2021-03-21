@@ -56,7 +56,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file
   d3.json("samples.json").then((data) => {
-    console.log(data);
+    //console.log(data);
     // 3. Create a variable that holds the samples array.
     let { samples, metadata } = data;
     //    console.log(metadata);
@@ -84,10 +84,18 @@ function buildCharts(sample) {
     // Bar Chart
     //
     //
+
     var yticks = otu_ids
       .slice(0, 10)
+      .sort((a, b) => a.otu_ids - b.otu_ids)
+      .map((id) => "OTU " + id)
+      .reverse();
+    console.log(yticks); // 12.2
+
+    /*     var yticks = otu_ids
+      .slice(0, 10)
       .map((id) => "OTU " + id) // space " "
-      .reverse(); // 0-11
+      .reverse(); // 0-11 */
 
     // console.log(yticks);
 
@@ -170,7 +178,7 @@ function buildCharts(sample) {
 
     // 5. The washing frequency.
     var [metaObj] = metadataId;
-    console.log(metaObj);
+    //console.log(metaObj);
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
       {
