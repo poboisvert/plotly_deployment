@@ -85,17 +85,18 @@ function buildCharts(sample) {
     //
     //
 
-    var yticks = otu_ids
+    /*     var yticks = otu_ids
       .slice(0, 10)
       .sort((a, b) => a.otu_ids - b.otu_ids)
       .map((id) => "OTU " + id)
-      .reverse();
-    console.log(yticks); // 12.2
+      .reverse(); */
+    // console.log(yticks); // 12.2
 
-    /*     var yticks = otu_ids
+    // Samples is already in DESC order but not the labels
+    var yticks = otu_ids
       .slice(0, 10)
       .map((id) => "OTU " + id) // space " "
-      .reverse(); // 0-11 */
+      .reverse(); // 0-11
 
     // console.log(yticks);
 
