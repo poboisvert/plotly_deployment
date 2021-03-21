@@ -20,6 +20,12 @@ function init() {
 // Initialize the dashboard
 init();
 
+function reset(newSample) {
+  document.getElementById("selDataset").value = 940;
+  buildMetadata(newSample);
+  buildCharts(newSample);
+}
+
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
