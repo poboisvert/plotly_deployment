@@ -92,7 +92,7 @@ function buildCharts(sample) {
       .reverse(); */
     // console.log(yticks); // 12.2
 
-    // Samples is already in DESC order but not the labels
+    // sample_values is already in DESC order but not the labels
     var yticks = otu_ids
       .slice(0, 10)
       .map((id) => "OTU " + id) // space " "
@@ -217,11 +217,12 @@ function buildCharts(sample) {
       margin: { t: 10, b: 10 },
       annotations: [
         {
-          xref: "paper",
-          yref: "paper",
           xanchor: "center",
           yanchor: "center",
           showarrow: false,
+          text: "",
+          x: 0,
+          y: 0,
         },
       ],
     };
