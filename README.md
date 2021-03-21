@@ -1,1 +1,3 @@
-# plotly_deployment
+# Plotly - Bacteria Dashbording
+
+![preview](preview.png)

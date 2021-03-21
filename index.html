@@ -6,56 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bellybutton Biodiversity</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
     />
   </head>
-
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 jumbotron text-center">
-          <h1>Belly Button Biodiversity Dashboard</h1>
-          <p>Use the interactive charts below to explore the dataset</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="well">
-            <h5>Test Subject ID No.:</h5>
-            <!-- Select -->
-            <select
-              id="selDataset"
-              onchange="optionChanged(this.value)"
-            ></select>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Demographic Info</h3>
-            </div>
-            <div id="sample-metadata" class="panel-body"></div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <!--           BAR CHART -->
-          <div id="bar"></div>
-        </div>
-        <div class="col-md-5">
-          <!--           GAUGE CHART -->
-          <div id="gauge"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <!--           BUBBLE CHART -->
-          <div id="bubble"></div>
-        </div>
-      </div>
-    </div>
+    <header
+      class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm"
+    >
+      <p class="h5 my-0 me-md-auto fw-normal">Biodiversity Dashboard</p>
+      <a class="btn btn-outline-primary" href="javascript:optionChanged(940)"
+        >Reset</a
+      >
+    </header>
 
+    <main class="container-md">
+      <div
+        class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"
+        style="margin: 25px; background-color: #ecf0f1 !important"
+      >
+        <h1 class="col-md-12 jumbotron text-center display-4">Belly Button</h1>
+        <p class="lead">
+          Use the interactive charts below to explore the dataset
+        </p>
+        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+      </div>
+
+      <div
+        class="row row-cols-1 row-cols-md-3 mb-3 text-center align-items-center"
+      >
+        <div class="col">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 fw-normal">Bar Chart</h4>
+            </div>
+            <div class="card-body">
+              <!--           BAR CHART -->
+              <div id="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 offset-md-2">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 fw-normal">Gauge Chart</h4>
+            </div>
+            <div class="card-body">
+              <!--           GAUGE CHART -->
+              <div id="gauge"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 fw-normal">Bubble Chart</h4>
+            </div>
+            <div class="card-body">
+              <!--           BUBBLE CHART -->
+              <div id="bubble"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <small class="d-block mb-3 text-muted"
+              >&copy; Bootstrap 5 | 2021</small
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!--     <script src="plots.js"></script> -->
-    <script src="chart.js"></script>
+    <script src="src/chart.js"></script>
   </body>
 </html>
